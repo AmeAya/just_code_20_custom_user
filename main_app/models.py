@@ -43,3 +43,10 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = []  # REQUIRED_FIELDS -> Поля, обязательные для создания юзера
 
     objects = MyUserManager()  # Привязываем MyUserManager к нашему MyUser
+
+
+class EmailCode(models.Model):
+    email = models.EmailField(unique=True)
+    code = models.PositiveIntegerField(unique=True)
+    created_at = models.DateTimeField(auto_now=True)
+    # auto_now = True -> При созданий объекта, ему записываются текущие время и дата

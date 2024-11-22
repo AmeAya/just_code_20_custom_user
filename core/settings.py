@@ -15,6 +15,15 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_PORT = 465  # 465 только для gmail
+EMAIL_USE_TLS = False  # TLS - transport layer security -> Защищенный протокол передачи данных
+EMAIL_USE_SSL = True  # SSL - Secure Sockets Layer -> Защищенный протокол передачи данных
+EMAIL_HOST = 'smtp.gmail.com'  # Адрес ssl сервера
+EMAIL_HOST_USER = 'utcoin.service.code@gmail.com'  # Юзер
+EMAIL_HOST_PASSWORD = 'btutskyjitdcuvno'  # Пароль
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/

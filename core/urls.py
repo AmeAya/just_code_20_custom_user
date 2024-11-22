@@ -21,4 +21,6 @@ from main_app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test', TestApiView.as_view()),
+    path('send_code', SendCodeApiView.as_view()),
+    path('registration', RegistrationApiView.as_view()),
 ]
